@@ -2,3 +2,7 @@ build/
 misc/
 *.log
 test/
+*.aux
+*.fls
+*.fdb*
+*.synctex*
