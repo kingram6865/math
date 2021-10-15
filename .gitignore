@@ -6,3 +6,4 @@ test/
 *.fls
 *.fdb*
 *.synctex*
+*.pdf
