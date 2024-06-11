@@ -1,0 +1,19 @@
+
+Criticize this argument.
+
+Let us show that every positive integer has some interesting property. Let $P(n)$ be the statement that n has an interesting property. We use complete induction.
+
+Of course $P(1)$ is true, since 1 is the only positive integer that equals its own square, which is surely an interesting property of 1.
+
+Suppose $P(m)$ is true for $1 \le m \le k$. If $P(k+1)$ were not true, then $k+1$ would be the smallest integer without an interesting property, 
+which would in itself, be an interesting property of $k+1$. So $P(k+1)$ must be true. Thus $P(n)$ is true for all $n \in \mathbb{Z}^+$
+====
+
+We have never been able really to see any flaw in (a). Try your luck with it and then answer (b)
+
+(a) A murderer is sentenced to be executed. He asks the judge not to let him know the day of the execution. The judge says, "I sentence you to be executed at 9 A.M. some day of this coming January, but I promise that you will not be aware you are being executed that day until they come to  get you at 8 A.M." The criminal goes to his cell and proceeds to prove he can't be executed in January as follolws:
+
+Let $P(n)$ be the statement that I can't be executed on  January $(31-n)$. I want to prove $P(n)$ for $0 \le n \le 30$. Now I can't be executed on January 31, since that is the last day of the month and I am to be executed that month, I would know that was the day before 8 A.M., contrary to the judge's sentence. Thus P(0) is true. Suppose P(m) is true for 0 <= m <= k where k <= 29. That is suppose I can't be executed on January (31-k) through January 31. Then January (31 - k -1) must be the last possible day for execution, and I would be  aware that was the day before 8 A.M., constrary tioo he judge's sentence. Thus I can't be executed on January (31 - (k+1)), so P(k+1) is true. Therefore I can't be executed in January.
+(Of course , the criminal was executed on January 17.)
+
+(b) An instructor teaches a class five days a week. Monday through Friday. She tells her class that she will give one more quiz on one day during the final week of classes but that the students will not know for sure the quiz will be that day until they come to the classroom. What is the last day of the week she can give the quiz to satisfy these conditions?

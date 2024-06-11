@@ -1,0 +1,108 @@
+
+\documentclass[11pt]{article}
+\include{macros}
+\title{Exercise Set 1:\\Matrix and Linear Algebra}
+\author{Math 480b, Spring 2009, University of Washington}
+\date{Due Wednesday, April 8, 2009}
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+\item Given vectors $x,y\in \RR^n$, the cosine of the angle $\theta$ between them is $\cos(\theta) = (x\cdot y)/(\|x\|\cdot \|y\|)$, 
+where $\|(x_1,\ldots,x_n)\| = \sqrt{\sum x_i^2}$.  Let $x=(1,2,3,\ldots,100)$ and $y=(1^2,2^2,3^2,\ldots,100^2)$. What is the angle
+$\theta$ between $x$ and $y$?
+
+\item Plot the given 2 planes in 3D and a black line along their intersection:
+\begin{enumerate}
+\item $x_1+x_2+x_3 = 1$ and $2x_1 + x_2 + 2x_3 = 1$. 
+\item $x_1 - x_2 = 1$ and $x_1 + x_2 + 2x_3 = 5$.
+\end{enumerate}
+
+\item Find the reduced row echelon form over the rational numbers $\QQ$ of the following matrices:
+\begin{enumerate}
+\item The $10\times10$ matrix whose entries are $1,2,3,\ldots,97,98,99,100$, where $1,\ldots,10$ are the first row, $11,\ldots,20$ the second row, etc.
+\item The $10\times10$ matrix whose $i,j$ entry is $i^2 + j^2$ for $0\leq i,j \leq 9$.  (In Sage, matrix indexing is 0-based.)
+\item The $10\times10$ matrix whose $i,j$ entry is $i^2 \cdot j^2$ for $0\leq i,j \leq 9$.
+
+\end{enumerate}
+
+\item   For which values of $\alpha$ is the determinant of the following matrix equal to $0$?
+$$
+A = \left(\begin{array}{rrrr}
+1 & 2 & 0 & -\alpha \\
+1 & 0 & 0 & \alpha \\
+\alpha & 0 & 1 & 2 \\
+\alpha & 1 & -1 & 0
+\end{array}\right)
+$$
+
+\item
+\begin{enumerate}
+\item Create a random $100\times100$ matrix $A$ with double precision entries between 0 and 1. [Hint: use \texttt{random\_matrix(RDF,100,min=0,max=1)}.]
+\item Draw 2D plots of $A$, $A^{-1}$, $A^2$, and $A^{100}$.
+\item Can you explain any of the patterns you see in your plots?
+\end{enumerate}
+
+\item Make a Sage \texttt{interact} that takes a $3\times 3$ matrix
+  $A$ with entries in the rational field $\QQ$, and computes and
+  displays the following information about $A$:
+\begin{itemize}
+\item a plot of $A$
+\item the determinant of $A$
+\item the rank and nullity of $A$
+\item the reduced row echelon form of $A$
+\item the characteristic and minimal polynomials of $A$
+\item the eigenvalues and eigenvectors of $A$
+\end{itemize}
+
+
+\item Let $V=\text{span}((1/2,0,0), (0,1,1))$ and 
+$W=\text{span}((-1,1,0), (2/3,1,2))$.
+\begin{enumerate}
+\item Plot $V$ and $W$ together in 3D.
+\item Compute the sum $V+W$ of $V$ and $W$.
+\item Compute the intersection $V\cap W$.
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+\item Draw a plot in 2D of the set of $(x,y)\in\RR^2$ that satisfy
+$$
+\left(\begin{array}{rr}
+x & y
+\end{array}\right) \left(\begin{array}{rr}
+1 & 2 \\
+2 & -2
+\end{array}\right)
+\left(\begin{array}{r}
+x \\
+y
+\end{array}\right)
+= 6
+$$
+
+\item Draw a plot in 3D of the set of $(x,y,z)\in\RR^3$ that satisfy
+$$
+\left(\begin{array}{rrr}
+x & y & z
+\end{array}\right)
+\left(\begin{array}{rrr}
+0 & 1 & 1 \\
+1 & 1 & 0 \\
+1 & 0 & 1
+\end{array}\right)
+\left(\begin{array}{r}
+x \\
+y \\
+z
+\end{array}\right)
+=2
+$$
+Note that Sage (March 2009) does not have an \texttt{implicit\_plot3d} command, so you
+will have to piece together plots using \texttt{plot\_3d} or use \texttt{parametric\_plot3d}.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
