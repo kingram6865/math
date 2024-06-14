@@ -6,9 +6,142 @@
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 \usepackage{graphicx}
+\usepackage{caption}
 \usepackage[inline]{enumitem}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 
 \begin{document}
-  Enter exercises
+Exercises 1 through 4 concern the binary operation $ \ast $ defined on $S=\{a,b,c,d,e\}$ by means of Table 1.4.
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l|l|l|l|l|l}
+        $\ast$ & a & b & c & d & e \\
+        \hline
+        a & a & b & c & b & d \\
+        \hline
+        b & b & c & a & e & c\\
+        \hline
+        c & c & a & b & b & a\\
+        \hline
+        d & b & c & b & e & d \\
+        \hline
+        e & d & b & a & d & c
+      \end{tabular}
+    \end{center}
+    \captionsetup{labelformat=empty}
+    \caption{Table 1.4}
+  \end{table}
+  \begin{enumerate}
+    \item Compute $ b \ast c $, $ c \ast c $, $ [(a \ast c) \ast e] \ast a $
+    \item Compute $ (a \ast b) \ast c $ and $a \ast (b \ast c)$. Can you say on the basis of this computation whether $\ast$ is associative?
+    \item Compute $(b \ast d) \ast c$ and $b \ast (d \ast c)$. Can you say on the basis of this computation whether $\ast$ is associative?
+    \item Is * commutative? Why?
+  \end{enumerate}
+  
+  \begin{enumerate}[resume]
+    \item Complete Table 1.5 so as to define a commutative binary operation $\ast $ on $S=\{a,b,c,d\}$. \\
+    \begin{table}[h]
+      \begin{center}
+        \captionsetup{labelformat=empty}
+        \caption{Table 1.5}
+        \begin{tabular}{l|l|l|l|l} 
+          $\ast$ & a & b & c & d \\
+          \hline
+          a & a & b & c &  \\
+          \hline
+          b & b & d &  & c \\
+          \hline
+          c & c & a & d & b \\
+          \hline
+          d & b &  &  & a
+        \end{tabular}
+      \end{center}
+    \end{table}
+    \item Complete Table 1.6 so as to define a associative binary operation $\ast $ on $S=\{a,b,c,d\}$. 
+          Assume this is possible and compute the missing entries\\
+    \begin{table}[h]
+      \begin{center}
+        \captionsetup{labelformat=empty}
+        \caption{Table 1.6}
+        \begin{tabular}{l|l|l|l|l} 
+          $\ast$ & a & b & c & d \\
+          \hline
+          a & a & b & c &  \\
+          \hline
+          b & b & d &  & c \\
+          \hline
+          c & c & a & d & b \\
+          \hline
+          d & b &  &  & a
+        \end{tabular}
+      \end{center}
+    \end{table}
+  \end{enumerate}
+
+  In Exercises 7 through 11, determine whether the binary operator $\ast$ defined is commutative and whether $\ast$ is associative.
+  \begin{enumerate}[resume]
+    \item $\ast$ defined on $\mathbb{Z}$ by $a \ast b = a-b$
+    \item $\ast$ defined on $\mathbb{Q}$ by $a \ast b = ab+1$
+    \item $\ast$ defined on $\mathbb{Q}$ by $a \ast b = ab/2$
+    \item $\ast$ defined on $\mathbb{Z}^+$ by $a \ast b = 2^{ab}$
+    \item $\ast$ defined on $\mathbb{Z}^+$ by $a \ast b = a^b$
+  \end{enumerate}
+
+  \begin{enumerate}[resume]
+    \item Let $S$ be a set having exactly one element. How many different binary operations
+    can be defined on $S$? Answer the question if $S$ has exactly 2 elements ; exactly 3 elements; exacly $n$ elements.
+
+    \item How many different commutative binary operations can be defined on a set of 2 elements? \\
+    on a set of 3 elements? on a set of $n$ elements.
+  \end{enumerate}
+
+  \section*{CONCEPTS}
+
+  In exercises 14 through 19, determine whether the definition of $\ast$ does give a binary operation \\
+  on the set. In the event that $\ast$ is not a binary operation. state whether Condition 1, Condition 2\\
+  or both of these conditions on page 14 are violated.
+  \begin{enumerate}[resume]
+    \item On $\mathbb{Z}^+$, define $\ast$ by $a*b=a-b$
+    \item On $\mathbb{Z}^+$, define $\ast$ by $a*b=a^b$
+    \item On $\mathbb{R}$, define $\ast$ by $a*b=a-b$
+    \item On $\mathbb{Z}^+$, define $\ast$ by $a*b=c$ where $c$ is the smallest integer greater than both a and b.
+    \item On $\mathbb{Z}^+$, define $\ast$ by $a*b=c$ where $c$ is at least 5 more than $a+b$.
+    \item On $\mathbb{Z}^+$, define $\ast$ by $a*b=c$ where $c$ is the largest integer less than the product of $a$ and $b$.
+  \end{enumerate}
+
+  \begin{enumerate}[resume]
+    \item Mark each of the following true or false.
+    \begin{enumerate}
+      \item If $\ast$ is any binary operation on $S$, then $a\ast a = a$ for all $a \in S$.
+      \item If $\ast$ is any commutative binary operation on any set $S$, then $a \ast (b \ast c) = (b \ast c) \ast a$ for all $a, b,c \in S$.
+      \item If $\ast$ is any associative binary operation on any set $S$, then $a \ast (b \ast c)=(b \ast c) \ast a$ for all $a, b, c \in S$
+      \item The only binary operations of any importance are those defined on sets of numbers.
+      \item A binary operation $\ast$ on a set $S$ is  commutative if there exist $a, b \in S$ such that $a\ast b = b \ast a$.
+      \item Every binary operation defined on a set $S$ having exactly one element is both commutative and associative.
+      \item A binary operation on a set $S$ assigns at least one element of $S$ to some ordered pair of elements of $S$.
+      \item A binary operation on a set $S$ assigns at most one element of $S$ to some ordered pair of elements of $S$.
+      \item A binary operation on a set $S$ assigns exactly one element of $S$ to some ordered pair of elements of $S$.
+      \item A binary operation on a set $S$ may assign more than one element of $S$ to some ordered pair of elements of $S$.
+    \end{enumerate}
+  \end{enumerate}
+
+  \begin{enumerate}[resume]
+    \item Give a set different from any of those described in the examples of the text and not a set of numbers. Define two different binary
+    operations $\ast$ and $\ast$ on this set. Be sure that your set is \textit{well defined}.
+  \end{enumerate}
+
+  \section*{THEORY}
+
+  \begin{enumerate}[resume]
+    \item Prove that if $*$ is an associative and commutative binary operation on a set $S$, then 
+    \[ (a\ast b)\ast (c \ast d)=[(d \ast c) \ast a] \ast b \] 
+    for all $a, b,c,d \in S$. Assume the associative law only for triples as in the definition,
+    that is, assume only \[ (a * y)*z= x*(y*z) \] for all $x, y,z \in S$.
+  \end{enumerate}
+
+\noindent In exercises 23 and 24, either prove the statement or give a counterexample.
+  \begin{enumerate}[resume]
+    \item Every binary operation on a set consisting of a single element is both commutative and associative.
+    \item Every commutative binary operation on a set having just two elements is associative.
+  \end{enumerate}
 \end{document}
