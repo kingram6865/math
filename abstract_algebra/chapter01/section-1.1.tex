@@ -7,6 +7,7 @@
 \usepackage{mathrsfs}
 \usepackage{graphicx}
 \usepackage{caption}
+\usepackage{array, xcolor}
 \usepackage[inline]{enumitem}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 
@@ -14,9 +15,9 @@
 Exercises 1 through 4 concern the binary operation $ \ast $ defined on $S=\{a,b,c,d,e\}$ by means of Table 1.4.
   \begin{table}[h]
     \begin{center}
-      \begin{tabular}{l|l|l|l|l|l}
+      \begin{tabular}{l!{\vrule width 2pt}l|l|l|l|l}
         $\ast$ & a & b & c & d & e \\
-        \hline
+        \noalign{\hrule height 2pt}
         a & a & b & c & b & d \\
         \hline
         b & b & c & a & e & c\\
@@ -44,9 +45,9 @@ Exercises 1 through 4 concern the binary operation $ \ast $ defined on $S=\{a,b,
       \begin{center}
         \captionsetup{labelformat=empty}
         \caption{Table 1.5}
-        \begin{tabular}{l|l|l|l|l} 
+        \begin{tabular}{l!{\vrule width 2pt}l|l|l|l} 
           $\ast$ & a & b & c & d \\
-          \hline
+          \noalign{\hrule height 2pt}
           a & a & b & c &  \\
           \hline
           b & b & d &  & c \\
@@ -63,16 +64,16 @@ Exercises 1 through 4 concern the binary operation $ \ast $ defined on $S=\{a,b,
       \begin{center}
         \captionsetup{labelformat=empty}
         \caption{Table 1.6}
-        \begin{tabular}{l|l|l|l|l} 
+        \begin{tabular}{l!{\vrule width 2pt}l|l|l|l} 
           $\ast$ & a & b & c & d \\
+          \noalign{\hrule height 2pt}
+          a & a & b & c & d \\
           \hline
-          a & a & b & c &  \\
+          b & b & a & c & d \\
           \hline
-          b & b & d &  & c \\
+          c & c & d & c & d \\
           \hline
-          c & c & a & d & b \\
-          \hline
-          d & b &  &  & a
+          d &  &  &  & 
         \end{tabular}
       \end{center}
     \end{table}
@@ -139,9 +140,77 @@ Exercises 1 through 4 concern the binary operation $ \ast $ defined on $S=\{a,b,
     that is, assume only \[ (a * y)*z= x*(y*z) \] for all $x, y,z \in S$.
   \end{enumerate}
 
-\noindent In exercises 23 and 24, either prove the statement or give a counterexample.
+  \noindent In exercises 23 and 24, either prove the statement or give a counterexample.
   \begin{enumerate}[resume]
     \item Every binary operation on a set consisting of a single element is both commutative and associative.
     \item Every commutative binary operation on a set having just two elements is associative.
   \end{enumerate}
+
+  \noindent Let $F$ be the set of all real-valued functions with domain $\mathbb{R}$. Function composition $\circ$
+  $F$ is defined by \[ (f \circ g)(x) = f(g(x)) \ \ \ \ \text{ for all \ \ $x \in \mathbb{R}$}  \] 
+  In Exercises 25 through 29, either prove the statement or give a counterexample.
+  \begin{enumerate}[resume]
+    \item Function composition on $F$ is commutative.
+    \item Function composition on $F$ is associative.
+    \item Function multiplication on $F$ is commutative.
+    \item Function addition on $F$ is commutative.
+    \item If $*$ and $*^{\prime}$ are any two binary operations on a set $S$, then
+    \[ a*(b*^{\prime} c) = (a*b) *^{\prime} (a*c) \ \ \  \text{ for all $a, b, c \in S$}\]
+  \end{enumerate}
+
+  \begin{enumerate}[resume]
+    \item Observe that the binary operations $*$ and $*^{\prime}$ on the set $\{a, b\}$ given by the tables
+    \begin{center}    
+    \begin{tabular}{ccc}%
+      \begin{minipage}{.2\linewidth}
+      \begin{tabular}{c!{\vrule width 2pt}c|c}
+        $*$ & a & b \\
+        \noalign{\hrule height 2pt}
+        a & a & a \\
+        \hline
+        b & a & b \\
+      \end{tabular} 
+      \end{minipage} &
+
+      \begin{minipage}{.2\linewidth}
+      and 
+      \end{minipage} &
+
+      \begin{minipage}{.2\linewidth}
+        \begin{tabular}{c!{\vrule width 2pt}c|c}
+          $*^{\prime}$ & a & b \\
+          \noalign{\hrule height 2pt}
+          a & a & a \\
+          \hline
+          b & b & b \\
+        \end{tabular}
+        \end{minipage}
+    \end{tabular}
+  \end{center}
+    provide the \textit{same type of algebraic structure} on $\{a, b\}$, 
+    in the sense that if the table for $*^{\prime}$ is rewritten as
+
+    \begin{center}
+      \begin{tabular}{c!{\vrule width 2pt}c|c}
+        $*^{\prime}$ & b & a \\
+        \noalign{\hrule height 2pt}
+        b & b & b \\
+        \hline
+        a & b & a \\
+      \end{tabular}
+    \end{center}
+
+    this table for $*^{\prime}$ looks just like that for $*$, with the roles of $a$ and $b$ interchanged.
+
+    \begin{enumerate}
+      \item try to give a natural definition of a concept of two binary operations $*$ and $*^{\prime}$ on the same set 
+      giving \textit{algebraic structures of the same type}, which generalizes the observation.
+      \item How many different types of algebraic structures are given by the 16 possible different binary operations on a set of 2 elements.
+    \end{enumerate}    
+
+  \end{enumerate}
+
+
+
+
 \end{document}
